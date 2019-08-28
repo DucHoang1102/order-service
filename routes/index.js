@@ -1,19 +1,39 @@
 var routerIndex = require('express').Router();
 var routerGroup = require('express').Router();
-var templateController = require('../controllers/template');
+var orderController = require('../controllers/order');
+var stateController = require('../controllers/state');
 
-routerGroup.get('/', templateController.index);
+/*
+ * api/order
+ */
+routerGroup.get('/', orderController.index);
 
-routerGroup.get('/templates', templateController.view);
+routerGroup.get('/orders', orderController.view);
 
-routerGroup.post('/templates', templateController.new);
+routerGroup.post('/orders', orderController.new);
 
-routerGroup.get('/templates/:id', templateController.details);
+routerGroup.get('/orders/:id', orderController.details);
 
-routerGroup.put('/templates/:id', templateController.update);
+routerGroup.put('/orders/:id', orderController.update);
 
-routerGroup.delete('/templates/:id', templateController.delete);
+routerGroup.delete('/orders/:id', orderController.delete);
 
+/*
+ * api/state
+ */
+routerGroup.get('/states', stateController.view);
+
+routerGroup.post('/states', stateController.new);
+
+routerGroup.get('/states/:id', stateController.details);
+
+routerGroup.put('/states/:id', stateController.update);
+
+routerGroup.delete('/states/:id', stateController.delete);
+
+/*
+ * Entry point
+ */
 routerIndex.use('/api', routerGroup);
 
 module.exports = routerIndex;

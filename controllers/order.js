@@ -1,9 +1,9 @@
 var mongoose = require('mongoose'),
-    Template = mongoose.model('Templates');
+    Order    = mongoose.model('Orders');
 
 exports.index = function (req, res, next) {
     return res.json({
-        status: 'Template Service Api',
+        status: 'Order Service Api',
         message: 'Welcome'
     });
 };

@@ -1,7 +1,7 @@
 {
-  "name": "template-service",
+  "name": "Order-service",
   "version": "1.0.0",
-  "description": "Template for dinosa services",
+  "description": "Order service for DINOSA ERP",
   "main": "app.js",
   "scripts": {
     "test": "mocha --timeout 10000",
@@ -11,20 +11,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DucHoang1102/template-service.git"
+    "url": "git+https://github.com/DucHoang1102/order-service.git"
   },
   "author": "DucHoang<ndhdldt1@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DucHoang1102/template-service/issues"
+    "url": "https://github.com/DucHoang1102/order-service/issues"
   },
-  "homepage": "https://github.com/DucHoang1102/template-service#readme",
+  "homepage": "https://github.com/DucHoang1102/order-service#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^2.0.0",
     "express": "^4.17.1",
-    "id-random-generator": "^1.1.0",
     "mongoose": "^5.5.14",
     "mongoose-unique-validator": "^2.0.3",
     "morgan": "^1.9.1"
