@@ -9,14 +9,14 @@ var OrderSchema = new mongoose.Schema({
         embryos : { type: String },
         size    : { type: String },
         state   : { type: Number, min: 0, max: 1, default: 0 },
-        type    : { type: String, enum: ['new', 'old'], default: 'new'},
+        type    : { type: String, enum: ['new', 'old'], default: 'new' },
         label   : { type: String }
     }],
-    credit     : {},
+    credit     : { },
     note       : { type: String },
     state      : { type: String }  
 
-}, {timestamps: true});
+}, { timestamps: true });
 
 OrderSchema.plugin(uniqueValidator, 'is already exist.');
 

@@ -5,9 +5,10 @@ var StateSchema = new mongoose.Schema({
     id         : { type: String, upperCase: true, trim: true, required: true, unique: true },
     name       : { type: String },
     description: { type: String },
-    next       : { type: String }
+    next       : { type: String },
+    pre        : { type: String }
 
-}, {timestamps: true});
+}, { timestamps: true });
 
 StateSchema.plugin(uniqueValidator, 'is already exist.');
 
